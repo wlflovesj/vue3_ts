@@ -4,6 +4,7 @@
 import HelloWorld from "./components/HelloWorld.vue";
 function name(name: string) {}
 let abc = "123";
+let klkj = "ddd";
 </script>
 
 <template>
