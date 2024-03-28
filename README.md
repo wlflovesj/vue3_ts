@@ -371,6 +371,8 @@ npx husky-init
 ```
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
+<!-- soureTruee 需要额外添加 -->
+PATH=$PATH:/usr/local/bin:/user/local/sbin
 pnpm run format
 ```
 
