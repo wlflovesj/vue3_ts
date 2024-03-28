@@ -17,15 +17,7 @@ module.exports = {
       customSyntax: "postcss-html",
     },
   ],
-  ignoreFiles: [
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.tsx",
-    "**/*.ts",
-    "**/*.json",
-    "**/*.md",
-    "**/*.yaml",
-  ],
+  ignoreFiles: ["**/*.js", "**/*.jsx", "**/*.tsx", "**/*.ts", "**/*.json", "**/*.md", "**/*.yaml"],
   /**
    * null  => 关闭该规则
    * always => 必须
