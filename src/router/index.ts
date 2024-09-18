@@ -13,6 +13,11 @@ const router = createRouter({
       component: () => import("@/views/home.vue"),
     },
     {
+      path: "/three",
+      name: "three",
+      component: () => import("@/views/three.vue"),
+    },
+    {
       path: "/404",
       name: "404",
       component: () => import("@/views/error.vue"),

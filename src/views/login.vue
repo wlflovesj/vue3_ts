@@ -1,17 +1,20 @@
 <script setup lang="ts">
 import { reactive } from "vue";
 import { Check } from "@element-plus/icons-vue";
-import { onMounted } from "vue";
-import { reqLogin } from "@/api/user/index";
+import { onMounted, ref } from "vue";
 import useUserStore from "@/store/modules/user";
 let userStore = useUserStore();
 let loginForm = reactive({
   username: "",
   password: "",
 });
-onMounted(() => {
-  //   reqLogin({ username: "admin", password: "111111" });
-});
+
+const openUrl = () => {
+  window.open(
+    "http://adc-tracking-qa.oss-cn-shanghai.aliyuncs.com/IP42/decodedata/2023/08/25/dec_ABCDEFGHIGKLMNOPQ_code%3D51_calib_20230825_082925.tar?Expires=1720666673&OSSAccessKeyId=LTAI5tSmkTkZC4K2JhR2JY5R&Signature=%2F1vVd0mdmyG7tV0B8qgtMF2hn48%3D",
+  );
+};
+onMounted(() => {});
 const login = () => {
   userStore.userLogin(loginForm);
 };
@@ -22,6 +25,7 @@ const login = () => {
     <el-input v-model="loginForm.username"></el-input>
     <el-input v-model="loginForm.password"></el-input>
     <el-button @click="login" type="primary" :icon="Check">login</el-button>
+    <el-button @click="openUrl"></el-button>
   </div>
 </template>
 <style scoped lang="scss">

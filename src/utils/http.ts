@@ -72,7 +72,7 @@ const $get = (url: string, params: object) => {
 const $post = (url: string, params: object) => {
   return new Promise((resolve, reject) => {
     axios
-      .post(url, params) //是将对象 序列化成URL的形式，以&进行拼接
+      .post(url, params)
       .then((res) => {
         resolve(res.data);
       })
